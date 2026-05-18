@@ -1,0 +1,36 @@
+body { margin: 0; overflow:hidden; background: #000; }
+
+canvas { display: block; cursor: crosshair; }
+
+#tips {
+    position: absolute; top: 20px; left: 20px; color: rgb(152, 214, 81);
+    font-size: 3.6vw;
+    font-family: sans-serif; pointer-events: none; user-select: none;
+        }
+#reset {
+    /* 定位部分 */
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    
+    box-sizing: border-box;       /* 确保 padding 不会撑大设定的宽高 */
+    min-width: 120px;              /* 防止文字太少时按钮过窄 */
+    min-height: 144px;             /* 保证最小点击热区高度达标 */
+    height: 44px;                 /* 固定高度 */
+    padding: 0 16px;              /* 左右内边距 */
+    /* 视觉与文字样式 */
+    background: rgba(31, 3, 133, 0.218);
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+     font-family: sans-serif;
+    font-size: 34px;              /* 移动端基础字号用 px 最省心 */
+    line-height: 42px;            /* 行高 = 高度 - 上下边框(1px*2)，实现完美居中 */
+    text-align: center;
+    transition: all 0.3s;
+    touch-action: manipulation;   /* 消除移动端点击 300ms 延迟 */
+}
+#reset:hover {
+      background: rgba(31, 3, 133, 0.9);/*鼠标悬停时变亮*/
+  }
